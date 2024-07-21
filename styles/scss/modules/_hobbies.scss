@@ -1,0 +1,17 @@
+@use "../base/functions" as fn;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+.hobbies {
+	display: grid;
+	gap: spacing.$large;
+
+	&__card {
+		display: grid;
+		gap: spacing.$small;
+
+		&-image {
+			margin-bottom: spacing.$medium;
+		}
+	}
+}

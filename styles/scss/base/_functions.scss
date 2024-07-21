@@ -1,0 +1,11 @@
+@use "sass:math";
+
+@function pxToRem($px) {
+	// Convierte px a rem fácilmente
+
+	@if math.is-unitless($px) {
+		@return math.div($px, 16) * 1rem; // Devuelve el valor en rem
+	} @else {
+		@error 'No uses unidades en la fn rem.'; // Muestra error si el parm tiene alguna unidad
+	}
+}

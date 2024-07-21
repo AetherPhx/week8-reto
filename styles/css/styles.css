@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p {
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+p,
+span,
+a {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #828282;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+}
+
+.wrapper {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.layout {
+  padding: 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+.layout__left, .layout__right {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+@media (min-width: 43.75rem) {
+  .layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 56.25rem) {
+  .layout {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+.profile__photo {
+  align-self: center;
+  border-radius: 0.75rem;
+}
+.profile__contact {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+.profile__contact-text {
+  color: #4f4f4f;
+}
+.profile__description {
+  padding-right: 1rem;
+}
+
+.xp {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+.xp__card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
+}
+.xp__card-image {
+  max-width: 100%;
+}
+.xp__card-info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+.xp__card-title {
+  margin-top: 1rem;
+}
+
+.hobbies {
+  display: grid;
+  gap: 2rem;
+}
+.hobbies__card {
+  display: grid;
+  gap: 0.5rem;
+}
+.hobbies__card-image {
+  margin-bottom: 1rem;
+}
+
+.skills {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.skills-container {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 56.25rem) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skills__title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.skills__list {
+  display: grid;
+  gap: 1rem;
+}
+.skills__item {
+  display: flex;
+  justify-content: space-between;
+  color: #4f4f4f;
+}
+.skills__item span {
+  color: inherit;
+}
+
+.projects {
+  display: grid;
+  gap: 1rem;
+}
+.projects__card {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 56.25rem) {
+  .projects__card {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.projects__card-image {
+  margin: 0 auto;
+}
+.projects__card-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.projects__card-techs {
+  color: #4f4f4f;
+}
+.projects__card-title {
+  font-size: 1.5rem;
+}
+.projects__card-description {
+  font-size: 1rem;
+}
+.projects__card-footer {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+.projects__card-btn, .projects__card-code, .projects__card-demo {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid #2f80ed;
+  font-size: 1.125rem;
+}
+.projects__card-demo {
+  background-color: #2f80ed;
+  color: #fff;
+}
+.projects__card-code {
+  background-color: #fff;
+  color: #2f80ed;
+}
+
+.blog {
+  display: grid;
+  gap: 1rem;
+}
+.blog__card {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 56.25rem) {
+  .blog__card {
+    grid-template-areas: "header image";
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.blog__card-image {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+@media (min-width: 56.25rem) {
+  .blog__card-image {
+    grid-area: image;
+  }
+}
+.blog__card-info {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 56.25rem) {
+  .blog__card-info {
+    grid-area: header;
+  }
+}
+.blog__card-header, .blog__card-text {
+  display: grid;
+  gap: 1rem;
+}
+.blog__card-tag {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #828282;
+}
+.blog__card-title {
+  font-size: 1.5rem;
+}
+.blog__card-link {
+  color: #2f80ed;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,29 @@
+@use "../base/functions" as fn;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+.xp {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: spacing.$large;
+
+	&__card {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: spacing.$small;
+
+		&-image {
+			max-width: 100%;
+		}
+
+		&-info {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: spacing.$large;
+		}
+
+		&-title {
+			margin-top: spacing.$medium;
+		}
+	}
+}

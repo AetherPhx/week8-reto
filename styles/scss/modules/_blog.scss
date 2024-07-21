@@ -1,0 +1,59 @@
+@use "../base/functions" as fn;
+@use "../layout/breakpoints" as bp;
+@use "../theme/typography" as typo;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+.blog {
+	display: grid;
+	gap: spacing.$medium;
+
+	&__card {
+		display: grid;
+		gap: spacing.$large;
+
+		@include bp.breakpoint("large") {
+			grid-template-areas: "header image";
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+		}
+
+		&-image {
+			max-width: 100%;
+			border-radius: fn.pxToRem(12);
+
+			@include bp.breakpoint("large") {
+				grid-area: image;
+			}
+		}
+
+		&-info {
+			display: grid;
+			gap: spacing.$medium;
+
+			@include bp.breakpoint("large") {
+				grid-area: header;
+			}
+		}
+
+		&-header,
+		&-text {
+			display: grid;
+			gap: spacing.$medium;
+		}
+
+		&-tag {
+			font-size: typo.$sz-small;
+			font-weight: typo.$wg-light;
+			color: color.$gray;
+		}
+
+		&-title {
+			font-size: typo.$sz-large;
+		}
+
+		&-link {
+			color: color.$prim;
+		}
+	}
+}

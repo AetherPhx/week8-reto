@@ -1,0 +1,46 @@
+@use "functions" as fn;
+@use "../theme/typography" as typo;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+body {
+	background-color: color.$bg;
+	font-family: typo.$fm;
+}
+
+h1,
+h2,
+h3 {
+	font-size: typo.$sz-large;
+	font-weight: typo.$wg-medium;
+	color: color.$sec;
+}
+h1 {
+	font-weight: typo.$wg-bold;
+}
+h3 {
+	font-size: typo.$sz-medium;
+	font-weight: typo.$wg-bold;
+}
+
+p,
+span,
+a {
+	font-size: typo.$sz-medium;
+	font-weight: typo.$wg-medium;
+	color: color.$gray;
+}
+
+img {
+	max-width: 100%;
+}
+
+button {
+	border: none;
+}
+
+.wrapper {
+	background-color: color.$white;
+	padding: spacing.$medium;
+	border-radius: fn.pxToRem(12);
+}

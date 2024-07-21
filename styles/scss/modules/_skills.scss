@@ -1,0 +1,41 @@
+@use "../base/functions" as fn;
+@use "../layout/breakpoints" as bp;
+@use "../theme/typography" as typo;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+.skills {
+	height: fit-content;
+	&-container {
+		display: grid;
+		gap: spacing.$medium;
+	}
+
+	@include bp.breakpoint("large") {
+		&-container {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__title {
+		margin-bottom: spacing.$medium;
+		font-weight: typo.$wg-bold;
+	}
+
+	&__list {
+		display: grid;
+		gap: spacing.$medium;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		color: color.$sec;
+		span {
+			color: inherit;
+		}
+	}
+
+	// &__level {
+	// }
+}

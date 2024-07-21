@@ -1,0 +1,30 @@
+@use "../base/functions" as fn;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: spacing.$medium;
+
+	&__photo {
+		align-self: center;
+		border-radius: fn.pxToRem(12);
+	}
+
+	&__contact {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: spacing.$small;
+
+		&-text {
+			color: color.$sec;
+		}
+	}
+
+	&__description {
+		padding-right: spacing.$medium;
+	}
+}

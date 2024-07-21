@@ -1,0 +1,29 @@
+@use "../base/functions" as fn;
+@use "../layout/breakpoints" as bp;
+@use "../theme/typography" as typo;
+@use "../theme/colors" as color;
+@use "../theme/spacing" as spacing;
+
+.layout {
+	padding: spacing.$medium;
+	max-width: fn.pxToRem(1200);
+	margin: 0 auto;
+
+	display: grid;
+	gap: spacing.$large;
+
+	&__left,
+	&__right {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: spacing.$large;
+	}
+
+	@include bp.breakpoint("small") {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include bp.breakpoint("large") {
+		grid-template-columns: 1fr 2fr;
+	}
+}

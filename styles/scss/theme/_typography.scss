@@ -1,0 +1,23 @@
+@use "../base/functions" as fn;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$fm: "Montserrat", sans-serif;
+
+$sz-smaller: fn.pxToRem(14);
+$sz-small: fn.pxToRem(16);
+$sz-medium: fn.pxToRem(18);
+$sz-large: fn.pxToRem(24);
+
+// $wg-thin: 100;
+$wg-light: 300;
+$wg-medium: 500;
+$wg-bold: 600;
+
+// * Combinations:
+// 24px 600:       Main Title (Billy Pearson)
+// 24px 500:       Exp/Hobbies/Pj Title
+// 18px 600:       Hobbies hobbie
+// 18px 500:       Profile Job & P
+// 16px 600:       Exp Job
+// 16px 500:       Exp P/Hoobies P
+// 14px 500:       Exp Dates

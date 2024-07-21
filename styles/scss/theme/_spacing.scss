@@ -1,0 +1,5 @@
+@use "../base/functions" as fn;
+
+$small: fn.pxToRem(8);
+$medium: fn.pxToRem(16);
+$large: fn.pxToRem(32);

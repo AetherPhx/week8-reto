@@ -1,0 +1,39 @@
+html {
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	min-width: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	min-height: 100dvh;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+	text-wrap: balance;
+}
+
+p {
+	line-height: 1.5;
+	text-wrap: pretty;
+}
+
+ul {
+	list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
